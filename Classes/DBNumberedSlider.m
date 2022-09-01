@@ -61,6 +61,7 @@
     
     if(!thumbLabel){
         thumbLabel = [[UILabel alloc]initWithFrame:CGRectZero];
+        thumbLabel.adjustsFontSizeToFitWidth = YES;
         thumbLabel.userInteractionEnabled = NO;
         thumbLabel.text = @"";
         thumbLabel.textAlignment = NSTextAlignmentCenter;
