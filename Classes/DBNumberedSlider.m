@@ -66,7 +66,7 @@
         thumbLabel.textAlignment = NSTextAlignmentCenter;
         thumbLabel.textColor = self.textColor;
         thumbLabel.backgroundColor = [UIColor clearColor];
-        [self.superview addSubview:thumbLabel];
+        [self addSubview:thumbLabel];
     }
     
     [self updateThumb];
@@ -79,9 +79,7 @@
 }
 
 -(void)updateThumb {
-    
-    CGRect thumbRect = [self thumbRect];
-    thumbLabel.frame = CGRectMake(thumbRect.origin.x + self.frame.origin.x, self.frame.origin.y, self.frame.size.height,  self.frame.size.height);
+    thumbLabel.frame = [self thumbRect];
     thumbLabel.text = [NSString stringWithFormat:self.labelFormat, self.value];
     thumbLabel.font = self.font;
 }
